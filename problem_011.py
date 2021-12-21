@@ -1,5 +1,3 @@
-from math import prod
-
 digits = 4
 
 grid = [
