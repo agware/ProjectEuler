@@ -1,8 +1,8 @@
 import unittest
 
-from problem_014 import Collatz
+from problem_14 import Collatz
 
-class TestProblem014(unittest.TestCase):
+class TestProblem14(unittest.TestCase):
 
     def test_get_length_single(self):
         self.assertEqual(Collatz().get_length(-1), 0)
