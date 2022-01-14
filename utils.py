@@ -1,14 +1,20 @@
 def prime_sieve(target):
-    flags = [0] * target
-    flags[0] = 1
+    limit = target + 1
+    flags = [True] * limit
+    flags[0] = False
+    flags[1] = False
 
     primes = []
-    for i in range(target):
-        if flags[i] ==  0:
-            prime = i + 1
+    for i in range(limit):
+        if flags[i]:
+            prime = i
             primes.append(prime)
 
-            for j in range(i + prime, target, prime):
-                flags[j] = 1
+            for j in range(i + prime, limit, prime):
+                flags[j] = False
     
     return primes
+
+
+if __name__ == '__main__':
+    print(prime_sieve(20))
