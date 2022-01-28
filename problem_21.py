@@ -5,7 +5,7 @@ def get_factors(target):
 
     for x in range(2, target+1):
         limit = math.floor(math.sqrt(x))
-        for i in range(2, limit):
+        for i in range(2, limit+1):
             if x % i == 0:
                 factors[x].add(i)
                 factors[x].add(x // i)
